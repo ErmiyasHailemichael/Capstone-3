@@ -81,7 +81,7 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            productDao.update(id,product); // Update this code to fix bug 2 - Update duplicates
         }
         catch(Exception ex)
         {

@@ -1,0 +1,327 @@
+.
+├── ./README.md
+├── ./database
+│   ├── ./database/create_database_clothingstore.sql
+│   ├── ./database/create_database_easyshop.sql
+│   ├── ./database/create_database_groceryapp.sql
+│   ├── ./database/create_database_recordshop.sql
+│   └── ./database/create_database_videogamestore.sql
+├── ./folder_structure.txt
+├── ./mvnw
+├── ./mvnw.cmd
+├── ./pom.xml
+├── ./src
+│   ├── ./src/main
+│   │   ├── ./src/main/java
+│   │   │   └── ./src/main/java/org
+│   │   │       └── ./src/main/java/org/yearup
+│   │   │           ├── ./src/main/java/org/yearup/EasyshopApplication.java
+│   │   │           ├── ./src/main/java/org/yearup/configurations
+│   │   │           │   └── ./src/main/java/org/yearup/configurations/DatabaseConfig.java
+│   │   │           ├── ./src/main/java/org/yearup/controllers
+│   │   │           │   ├── ./src/main/java/org/yearup/controllers/AuthenticationController.java
+│   │   │           │   ├── ./src/main/java/org/yearup/controllers/CategoriesController.java
+│   │   │           │   ├── ./src/main/java/org/yearup/controllers/ProductsController.java
+│   │   │           │   └── ./src/main/java/org/yearup/controllers/ShoppingCartController.java
+│   │   │           ├── ./src/main/java/org/yearup/data
+│   │   │           │   ├── ./src/main/java/org/yearup/data/CategoryDao.java
+│   │   │           │   ├── ./src/main/java/org/yearup/data/ProductDao.java
+│   │   │           │   ├── ./src/main/java/org/yearup/data/ProfileDao.java
+│   │   │           │   ├── ./src/main/java/org/yearup/data/ShoppingCartDao.java
+│   │   │           │   ├── ./src/main/java/org/yearup/data/UserDao.java
+│   │   │           │   └── ./src/main/java/org/yearup/data/mysql
+│   │   │           │       ├── ./src/main/java/org/yearup/data/mysql/MySqlCategoryDao.java
+│   │   │           │       ├── ./src/main/java/org/yearup/data/mysql/MySqlDaoBase.java
+│   │   │           │       ├── ./src/main/java/org/yearup/data/mysql/MySqlProductDao.java
+│   │   │           │       ├── ./src/main/java/org/yearup/data/mysql/MySqlProfileDao.java
+│   │   │           │       └── ./src/main/java/org/yearup/data/mysql/MySqlUserDao.java
+│   │   │           ├── ./src/main/java/org/yearup/models
+│   │   │           │   ├── ./src/main/java/org/yearup/models/Category.java
+│   │   │           │   ├── ./src/main/java/org/yearup/models/Product.java
+│   │   │           │   ├── ./src/main/java/org/yearup/models/Profile.java
+│   │   │           │   ├── ./src/main/java/org/yearup/models/ShoppingCart.java
+│   │   │           │   ├── ./src/main/java/org/yearup/models/ShoppingCartItem.java
+│   │   │           │   ├── ./src/main/java/org/yearup/models/User.java
+│   │   │           │   └── ./src/main/java/org/yearup/models/authentication
+│   │   │           │       ├── ./src/main/java/org/yearup/models/authentication/Authority.java
+│   │   │           │       ├── ./src/main/java/org/yearup/models/authentication/LoginDto.java
+│   │   │           │       ├── ./src/main/java/org/yearup/models/authentication/LoginResponseDto.java
+│   │   │           │       └── ./src/main/java/org/yearup/models/authentication/RegisterUserDto.java
+│   │   │           └── ./src/main/java/org/yearup/security
+│   │   │               ├── ./src/main/java/org/yearup/security/JwtAccessDeniedHandler.java
+│   │   │               ├── ./src/main/java/org/yearup/security/JwtAuthenticationEntryPoint.java
+│   │   │               ├── ./src/main/java/org/yearup/security/SecurityUtils.java
+│   │   │               ├── ./src/main/java/org/yearup/security/UserModelDetailsService.java
+│   │   │               ├── ./src/main/java/org/yearup/security/UserNotActivatedException.java
+│   │   │               ├── ./src/main/java/org/yearup/security/WebSecurityConfig.java
+│   │   │               └── ./src/main/java/org/yearup/security/jwt
+│   │   │                   ├── ./src/main/java/org/yearup/security/jwt/JWTConfigurer.java
+│   │   │                   ├── ./src/main/java/org/yearup/security/jwt/JWTFilter.java
+│   │   │                   └── ./src/main/java/org/yearup/security/jwt/TokenProvider.java
+│   │   └── ./src/main/resources
+│   │       ├── ./src/main/resources/application.properties
+│   │       ├── ./src/main/resources/banner.txt
+│   │       └── ./src/main/resources/capstone-client-clothingstore
+│   │           ├── ./src/main/resources/capstone-client-clothingstore/css
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/css/lib
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/css/lib/bootstrap.css
+│   │           │   │   └── ./src/main/resources/capstone-client-clothingstore/css/lib/bootstrap.min.css
+│   │           │   └── ./src/main/resources/capstone-client-clothingstore/css/main.css
+│   │           ├── ./src/main/resources/capstone-client-clothingstore/images
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/images/logo.svg
+│   │           │   └── ./src/main/resources/capstone-client-clothingstore/images/products
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/adidas-campus.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/athletic-shorts.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/ballet-flats.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/basketball-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/bermuda-shorts.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/black-canvas-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/black-jeans.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/black-tshirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/blouse.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/blue-jeans.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/board-shorts.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/buttergoods-hoodie.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/button-shirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/cardigan.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/cargo-pants.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/carhartt-wip.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/champion-hoodie.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/combat-boots.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/crop-top.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/denim-jacket.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/denim-shorts.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/dress-pants.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/dress-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/flannel-shirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/flip-flops.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/floral-dress.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/gray-hoodie.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/heels.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/high-top-sneakers.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/high-waist-jeans.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/hiking-boots.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/jean-jacket.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/khaki-chinos.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/leather-boots.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/leggings.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/loafers.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/long-sleeve-shirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/maxi-skirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/mini-skirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/navy-sweater.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/no-image.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/palazzo-pants.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/photos.json
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/pleated-skirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/polo-shirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/rain-boots.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/reebok-classic.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/running-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/sandals.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/skate-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/skinny-jeans.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/slip-on-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/sweatpants.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/tank-top.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/track-pants.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/vneck-tshirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/white-canvas-shoes.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/white-tshirt.jpg
+│   │           │       ├── ./src/main/resources/capstone-client-clothingstore/images/products/winter-boots.jpg
+│   │           │       └── ./src/main/resources/capstone-client-clothingstore/images/products/wrap-dress.jpg
+│   │           ├── ./src/main/resources/capstone-client-clothingstore/index.html
+│   │           ├── ./src/main/resources/capstone-client-clothingstore/js
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/js/application.js
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/js/config.js
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/js/filter.js
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/js/lib
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/lib/axios.min.js
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/lib/bootstrap.min.js
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/lib/jquery.min.js
+│   │           │   │   └── ./src/main/resources/capstone-client-clothingstore/js/lib/mustache.js
+│   │           │   ├── ./src/main/resources/capstone-client-clothingstore/js/services
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/services/categories-service.js
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/services/products-service.js
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/services/profile-service.js
+│   │           │   │   ├── ./src/main/resources/capstone-client-clothingstore/js/services/shoppingcart-service.js
+│   │           │   │   └── ./src/main/resources/capstone-client-clothingstore/js/services/user-service.js
+│   │           │   └── ./src/main/resources/capstone-client-clothingstore/js/template-builder.js
+│   │           └── ./src/main/resources/capstone-client-clothingstore/templates
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/cart.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/error.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/filter.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/header.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/home.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/image-detail.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/login-form.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/message.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/product.html
+│   │               ├── ./src/main/resources/capstone-client-clothingstore/templates/profile.html
+│   │               └── ./src/main/resources/capstone-client-clothingstore/templates/user.html
+│   └── ./src/test
+│       ├── ./src/test/java
+│       │   └── ./src/test/java/org
+│       │       └── ./src/test/java/org/yearup
+│       │           ├── ./src/test/java/org/yearup/configuration
+│       │           │   └── ./src/test/java/org/yearup/configuration/TestDatabaseConfig.java
+│       │           └── ./src/test/java/org/yearup/data
+│       │               └── ./src/test/java/org/yearup/data/mysql
+│       │                   ├── ./src/test/java/org/yearup/data/mysql/BaseDaoTestClass.java
+│       │                   └── ./src/test/java/org/yearup/data/mysql/MySqlProductDaoTest.java
+│       └── ./src/test/resources
+│           ├── ./src/test/resources/application.properties
+│           └── ./src/test/resources/test-data.sql
+└── ./target
+    ├── ./target/classes
+    │   ├── ./target/classes/application.properties
+    │   ├── ./target/classes/banner.txt
+    │   ├── ./target/classes/capstone-client-clothingstore
+    │   │   ├── ./target/classes/capstone-client-clothingstore/css
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/css/lib
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/css/lib/bootstrap.css
+    │   │   │   │   └── ./target/classes/capstone-client-clothingstore/css/lib/bootstrap.min.css
+    │   │   │   └── ./target/classes/capstone-client-clothingstore/css/main.css
+    │   │   ├── ./target/classes/capstone-client-clothingstore/images
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/images/logo.svg
+    │   │   │   └── ./target/classes/capstone-client-clothingstore/images/products
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/adidas-campus.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/athletic-shorts.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/ballet-flats.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/basketball-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/bermuda-shorts.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/black-canvas-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/black-jeans.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/black-tshirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/blouse.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/blue-jeans.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/board-shorts.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/buttergoods-hoodie.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/button-shirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/cardigan.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/cargo-pants.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/carhartt-wip.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/champion-hoodie.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/combat-boots.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/crop-top.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/denim-jacket.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/denim-shorts.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/dress-pants.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/dress-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/flannel-shirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/flip-flops.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/floral-dress.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/gray-hoodie.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/heels.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/high-top-sneakers.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/high-waist-jeans.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/hiking-boots.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/jean-jacket.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/khaki-chinos.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/leather-boots.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/leggings.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/loafers.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/long-sleeve-shirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/maxi-skirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/mini-skirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/navy-sweater.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/no-image.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/palazzo-pants.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/photos.json
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/pleated-skirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/polo-shirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/rain-boots.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/reebok-classic.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/running-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/sandals.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/skate-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/skinny-jeans.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/slip-on-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/sweatpants.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/tank-top.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/track-pants.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/vneck-tshirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/white-canvas-shoes.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/white-tshirt.jpg
+    │   │   │       ├── ./target/classes/capstone-client-clothingstore/images/products/winter-boots.jpg
+    │   │   │       └── ./target/classes/capstone-client-clothingstore/images/products/wrap-dress.jpg
+    │   │   ├── ./target/classes/capstone-client-clothingstore/index.html
+    │   │   ├── ./target/classes/capstone-client-clothingstore/js
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/application.js
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/config.js
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/filter.js
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/lib
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/lib/axios.min.js
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/lib/bootstrap.min.js
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/lib/jquery.min.js
+    │   │   │   │   └── ./target/classes/capstone-client-clothingstore/js/lib/mustache.js
+    │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/services
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/services/categories-service.js
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/services/products-service.js
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/services/profile-service.js
+    │   │   │   │   ├── ./target/classes/capstone-client-clothingstore/js/services/shoppingcart-service.js
+    │   │   │   │   └── ./target/classes/capstone-client-clothingstore/js/services/user-service.js
+    │   │   │   └── ./target/classes/capstone-client-clothingstore/js/template-builder.js
+    │   │   └── ./target/classes/capstone-client-clothingstore/templates
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/cart.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/error.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/filter.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/header.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/home.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/image-detail.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/login-form.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/message.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/product.html
+    │   │       ├── ./target/classes/capstone-client-clothingstore/templates/profile.html
+    │   │       └── ./target/classes/capstone-client-clothingstore/templates/user.html
+    │   └── ./target/classes/org
+    │       └── ./target/classes/org/yearup
+    │           ├── ./target/classes/org/yearup/EasyshopApplication.class
+    │           ├── ./target/classes/org/yearup/configurations
+    │           │   └── ./target/classes/org/yearup/configurations/DatabaseConfig.class
+    │           ├── ./target/classes/org/yearup/controllers
+    │           │   ├── ./target/classes/org/yearup/controllers/AuthenticationController.class
+    │           │   ├── ./target/classes/org/yearup/controllers/CategoriesController.class
+    │           │   ├── ./target/classes/org/yearup/controllers/ProductsController.class
+    │           │   └── ./target/classes/org/yearup/controllers/ShoppingCartController.class
+    │           ├── ./target/classes/org/yearup/data
+    │           │   ├── ./target/classes/org/yearup/data/CategoryDao.class
+    │           │   ├── ./target/classes/org/yearup/data/ProductDao.class
+    │           │   ├── ./target/classes/org/yearup/data/ProfileDao.class
+    │           │   ├── ./target/classes/org/yearup/data/ShoppingCartDao.class
+    │           │   ├── ./target/classes/org/yearup/data/UserDao.class
+    │           │   └── ./target/classes/org/yearup/data/mysql
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlCategoryDao$1.class
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlCategoryDao.class
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlDaoBase.class
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlProductDao.class
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlProfileDao.class
+    │           │       ├── ./target/classes/org/yearup/data/mysql/MySqlShoppingCartDao.class
+    │           │       └── ./target/classes/org/yearup/data/mysql/MySqlUserDao.class
+    │           ├── ./target/classes/org/yearup/models
+    │           │   ├── ./target/classes/org/yearup/models/Category.class
+    │           │   ├── ./target/classes/org/yearup/models/Product.class
+    │           │   ├── ./target/classes/org/yearup/models/Profile.class
+    │           │   ├── ./target/classes/org/yearup/models/ShoppingCart.class
+    │           │   ├── ./target/classes/org/yearup/models/ShoppingCartItem.class
+    │           │   ├── ./target/classes/org/yearup/models/User.class
+    │           │   └── ./target/classes/org/yearup/models/authentication
+    │           │       ├── ./target/classes/org/yearup/models/authentication/Authority.class
+    │           │       ├── ./target/classes/org/yearup/models/authentication/LoginDto.class
+    │           │       ├── ./target/classes/org/yearup/models/authentication/LoginResponseDto.class
+    │           │       └── ./target/classes/org/yearup/models/authentication/RegisterUserDto.class
+    │           └── ./target/classes/org/yearup/security
+    │               ├── ./target/classes/org/yearup/security/JwtAccessDeniedHandler.class
+    │               ├── ./target/classes/org/yearup/security/JwtAuthenticationEntryPoint.class
+    │               ├── ./target/classes/org/yearup/security/SecurityUtils.class
+    │               ├── ./target/classes/org/yearup/security/UserModelDetailsService.class
+    │               ├── ./target/classes/org/yearup/security/UserNotActivatedException.class
+    │               ├── ./target/classes/org/yearup/security/WebSecurityConfig.class
+    │               └── ./target/classes/org/yearup/security/jwt
+    │                   ├── ./target/classes/org/yearup/security/jwt/JWTConfigurer.class
+    │                   ├── ./target/classes/org/yearup/security/jwt/JWTFilter.class
+    │                   └── ./target/classes/org/yearup/security/jwt/TokenProvider.class
+    └── ./target/generated-sources
+        └── ./target/generated-sources/annotations
+
+56 directories, 269 files

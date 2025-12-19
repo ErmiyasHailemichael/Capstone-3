@@ -102,6 +102,23 @@ class ShoppingCartService {
         this.cart.items.forEach(item => {
             this.buildItem(item, contentDiv)
         });
+        if (this.cart.items.length > 0) {
+        const totalDiv = document.createElement("div");
+        totalDiv.style.marginTop = "20px";
+        totalDiv.style.textAlign = "right";
+        totalDiv.style.fontSize = "20px";
+        totalDiv.style.fontWeight = "bold";
+        totalDiv.innerText = `Total: $${this.cart.total.toFixed(2)}`;
+        contentDiv.appendChild(totalDiv);
+
+        // Checkout button
+        const checkoutBtn = document.createElement("button");
+        checkoutBtn.classList.add("btn", "btn-success");
+        checkoutBtn.innerText = "Checkout";
+        checkoutBtn.style.marginTop = "10px";
+        checkoutBtn.addEventListener("click", () => this.checkout());
+        contentDiv.appendChild(checkoutBtn);
+        }
     }
 
     buildItem(item, parent)
@@ -171,6 +188,22 @@ class ShoppingCartService {
 
                  templateBuilder.append("error", data, "errors")
              })
+    }
+    checkout()
+    {
+        const url = `${config.baseUrl}/orders`;
+
+        axios.post(url, {})
+            .then(response => {
+                alert("Order created! ID: " + response.data.orderId);
+
+                this.cart = { items: [], total: 0 };
+                this.updateCartDisplay();
+                this.loadCartPage();
+            })
+            .catch(error => {
+                alert("Checkout failed!");
+            });
     }
 
     updateCartDisplay()
